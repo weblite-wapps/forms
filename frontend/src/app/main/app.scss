@@ -1,0 +1,12 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+}
+.body {
+  background: #956666;
+  width: 100%;
+  flex: 1;
+}

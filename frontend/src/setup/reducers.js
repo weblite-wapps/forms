@@ -1,7 +1,7 @@
-// import viewReducers from '../App/main/app.reducer'
-// import mainReducers from '../logic/main/main.reducer'
+import { combineReducers } from 'redux'
+// reducers
+import appReducer from '../app/main/app.reducer'
 
-// export default {
-//   view: viewReducers,
-//   main: mainReducers,
-// }
+export default combineReducers({
+  app: appReducer,
+})
