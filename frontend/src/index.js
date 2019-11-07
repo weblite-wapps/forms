@@ -3,9 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // third-party-packages
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import App from './app/app'
+import App from './setup/root'
 // styles
-import { theme } from './helper/style/theme'
+import theme from './helper/style/theme'
 import './setup/index.css'
 import './setup/fonts/fonts.scss'
 

@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.iranyekan {
+  font-family: iranyekan;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }

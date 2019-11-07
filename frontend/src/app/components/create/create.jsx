@@ -4,6 +4,6 @@ import { withStyles } from '@material-ui/core/styles'
 
 // components
 
-const Create = () => 'Create'
+const Create = () => ''
 
 export default Create

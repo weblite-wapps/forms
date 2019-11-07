@@ -17,6 +17,10 @@ const reducers = {
   SET_FORM: (state, form) => ({ ...state, form }),
 
   SET_DRAFT_FORM: (state, draftForm) => ({ ...state, draftForm }),
+
+  ADD_TO_DRAFT_FORM: (state, fieldId) => {},
+
+  REMOVE_FROM_DRAFT_FORM: (state, fieldId) => {},
 }
 
 export default (state = initialState, { type, payload }) =>
