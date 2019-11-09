@@ -26,7 +26,6 @@ const StyledTab = withStyles({
     fontSize: '12px',
     lineHeight: '21px',
     letterSpacing: '-0.08px',
-    fontFamily: 'iranyekan',
     fontWeight: 'bold',
     padding: '0 12px',
     minHeight: '40px',
@@ -43,7 +42,7 @@ const MyTabs = ({ selected, navigate }) => (
     position="static"
     color="default"
     elevation={0}
-    style={{ width: '100%', position: 'fixed' }}
+    style={{ width: '100%' }}
   >
     <StyledTabs
       value={selected}
