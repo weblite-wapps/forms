@@ -6,7 +6,8 @@
   flex-direction: column;
 }
 .body {
-  background: #956666;
+  height: calc(100% - 90px);
   width: 100%;
-  flex: 1;
+  padding-top: 20px;
+  box-sizing: border-box;
 }

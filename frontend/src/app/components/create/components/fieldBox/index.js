@@ -1,2 +1,1 @@
-export {default Divider} from './divider'
-export {default Defaults} from './defaults'
+export { default } from './fieldBox'
