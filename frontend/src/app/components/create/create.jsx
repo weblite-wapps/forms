@@ -5,7 +5,9 @@ import { withStyles } from '@material-ui/core/styles'
 import FieldBox from './components/fieldBox'
 import Button from '../button/button'
 import SearchField from '../searchField/searchField'
+import User from '../user/user'
 
+//
 const Create = () => (
   <div>
     <FieldBox mode="DEFAULTS" />
@@ -25,6 +27,19 @@ const Create = () => (
       <Button text="خروجی اکسل" color="green" />
       <Button text="غیرفعال سازی" color="gray" />
     </center>
+
+    <User
+      name="مصطفی محسنی کبیر"
+      date="پنج شنبه ۱۲ آبان - ۱۶:۵۴"
+      onDelete={console.log}
+      avatarSrc="https://i.pinimg.com/564x/37/eb/f4/37ebf4bf5206f67cb5f221dc7dc92609.jpg"
+    />
+
+    <User
+      name="Ali Asgari"
+      date="پنج شنبه ۱۲ آبان - ۱۶:۵۴"
+      onDelete={console.log}
+    />
   </div>
 )
 
