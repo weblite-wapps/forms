@@ -41,7 +41,7 @@ const useStyles = makeStyles(() => ({
     height: 35,
   },
   draggableIcon: {
-    cursor: 'pointer',
+    cursor: 'move',
     margin: 'auto 0 auto 9px',
   },
 }))

@@ -1,5 +1,5 @@
 // modules
-import * as R from 'ramda'
+// import * as R from 'ramda'
 import { connect } from 'react-redux'
 
 // components

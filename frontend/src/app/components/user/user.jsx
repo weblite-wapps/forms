@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import Fab from '@material-ui/core/Fab'
 import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, darken } from '@material-ui/core/styles'
 //helper
-import { cns } from '../../../helper/style/utils'
+import { cns, ab } from '../../../helper/style/utils'
 
 const useStyles = makeStyles(theme => ({
   user: {
@@ -59,19 +59,28 @@ const useStyles = makeStyles(theme => ({
     minHeight: 30,
     backgroundColor: '#ccc',
     boxShadow: 'none',
-    transition: theme.transitions.create(['background-color']),
     '&:hover': {
-      backgroundColor: '#e6494f',
+      backgroundColor: darken('#ccc', 0.1),
+    },
+  },
+  deActive: {
+    backgroundColor: '#E6494F',
+    '&:hover': {
+      backgroundColor: darken('#E6494F', 0.1),
     },
   },
 }))
 
-const User = ({ name, onDelete, avatarSrc, date }) => {
+const User = ({ name, onDelete, avatarSrc, date, deActive }) => {
   const classes = useStyles()
   return (
     <div className={classes.user}>
       <div className={classes.body}>
-        <Fab size="small" className={classes.deleteButton} onClick={onDelete}>
+        <Fab
+          size="small"
+          className={cns(classes.deleteButton, ab(classes.deActive)(deActive))}
+          onClick={onDelete}
+        >
           <img src="assets/svg/trash.svg" alt="trash" />
         </Fab>
         <div className={classes.texts}>
@@ -108,9 +117,11 @@ User.propTypes = {
   onDelete: PropTypes.func.isRequired,
   avatarSrc: PropTypes.string,
   date: PropTypes.string.isRequired,
+  deActive: PropTypes.bool,
 }
 User.defaultProps = {
   avatarSrc: null,
+  deActive: false,
 }
 
 export default User

@@ -55,9 +55,14 @@ const HelperButtons = ({ onEdit, onDelete, onDuplicate }) => {
 }
 
 HelperButtons.propTypes = {
-  onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-  onDuplicate: PropTypes.func.isRequired,
+  onEdit: PropTypes.func,
+  onDelete: PropTypes.func,
+  onDuplicate: PropTypes.func,
+}
+HelperButtons.propTypes = {
+  onEdit: Function.prototype,
+  onDelete: Function.prototype,
+  onDuplicate: Function.prototype,
 }
 
 export default HelperButtons

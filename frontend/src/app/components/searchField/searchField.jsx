@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // third-party-packages
 import { makeStyles } from '@material-ui/core/styles'
-//helper
-import { cns } from '../../../helper/style/utils'
 
 const useStyles = makeStyles(() => ({
   searchComponent: {
@@ -47,7 +45,7 @@ const SearchField = ({ onChange, placeholder }) => {
       />
       <input
         dir="auto"
-        type="text"
+        type="search"
         className={classes.input}
         placeholder={placeholder}
         onChange={onChange}

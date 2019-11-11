@@ -10,7 +10,8 @@ import { cns } from '../../../helper/style/utils'
 
 const useStyles = makeStyles(() => ({
   button: {
-    width: 100,
+    flex: '1 1 100px',
+    width: '100%',
     height: 35,
     borderRadius: 11,
     color: '#fff',
@@ -22,7 +23,8 @@ const useStyles = makeStyles(() => ({
   },
   iconButton: {
     padding: 0,
-    width: 115,
+    flex: '1 0 115px',
+    width: '100%',
     overflow: 'hidden',
     '&:hover': {
       backgroundColor: 'transparent',
@@ -33,6 +35,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   iconButtonText: {
+    fontSize: 11,
     height: '100%',
     width: '100%',
     lineHeight: '35px',
@@ -108,10 +111,10 @@ const FormButton = ({ color, text, variant, onClick }) => {
 }
 
 FormButton.propTypes = {
-  color: PropTypes.oneOf([('blue', 'gray', 'green', 'yellow')]),
+  color: PropTypes.oneOf(['blue', 'gray', 'green', 'yellow']),
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  variant: PropTypes.oneOf([('plus', 'normal')]),
+  variant: PropTypes.oneOf(['plus', 'normal']),
 }
 FormButton.defaultProps = {
   color: 'blue',
