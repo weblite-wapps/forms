@@ -6,8 +6,10 @@
   flex-direction: column;
 }
 .body {
-  height: calc(100% - 90px);
+  height: calc(100% - 50px);
   width: 100%;
-  padding-top: 20px;
   box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  // transform: translateZ(0);
 }

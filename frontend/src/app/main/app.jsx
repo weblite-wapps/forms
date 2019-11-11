@@ -18,8 +18,10 @@ const componentMapper = {
 const App = ({ path }) => (
   <>
     <AppBar />
-    <Tabs />
-    <div className="body">{componentMapper[path]}</div>
+    <div className="body">
+      <Tabs />
+      {componentMapper[path]}
+    </div>
   </>
 )
 

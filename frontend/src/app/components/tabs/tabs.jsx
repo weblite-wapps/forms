@@ -9,8 +9,8 @@ import Tab from '@material-ui/core/Tab'
 const StyledTabs = withStyles({
   root: {
     backgroundColor: '#F0F0F0',
-    minHeight: '40px',
-    maxHeight: '40px',
+    minHeight: 40,
+    maxHeight: 40,
     shadowColor: 'none',
   },
   indicator: {
@@ -23,13 +23,14 @@ const StyledTabs = withStyles({
 const StyledTab = withStyles({
   root: {
     color: '#000',
-    fontSize: '12px',
+    fontFamily: 'inherit',
+    fontSize: 12,
     lineHeight: '21px',
-    letterSpacing: '-0.08px',
+    letterSpacing: -0.08,
     fontWeight: 'bold',
     padding: '0 12px',
-    minHeight: '40px',
-    maxHeight: '40px',
+    minHeight: 40,
+    maxHeight: 40,
     zIndex: 5,
   },
   selected: {
