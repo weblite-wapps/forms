@@ -6,6 +6,10 @@ import Button from '../button/button'
 import SearchField from '../searchField/searchField'
 import User from '../user/user'
 import Drawer from '../drawer/drawer'
+import Switch from '../switch/switchButtons'
+import TextOptions from '../textOptions/textOptions'
+import FiledAppBar from '../appBar/filedAppBar'
+import { SingleLineInput, MultiLineInput, ColorPicker } from '../Inputs'
 
 const Create = () => {
   const [open, setOpen] = React.useState(false)
@@ -13,75 +17,149 @@ const Create = () => {
   console.log('OPEN', open)
 
   return (
-    <div>
-      <FieldBox mode="DEFAULTS" type="صفحه شروع" onEdit={console.log} />
-      <FieldBox
-        mode="DIVIDER"
-        type="جداکننده (۱ از ۱)"
-        onDelete={console.log}
-        onDuplicate={console.log}
+    <>
+      <FiledAppBar
+        onLeft={console.log}
+        onRight={console.log}
+        title="پیش نمایش"
       />
-      <FieldBox
-        mode="COVER"
-        type="ورودی تک خطی"
-        title="محل تولد"
-        onEdit={console.log}
-        onDelete={console.log}
-        onDuplicate={console.log}
+      <FiledAppBar
+        onLeft={console.log}
+        onRight={console.log}
+        title="پیش نمایش"
+        variant="preview"
       />
-
-      <SearchField onChange={console.log} />
-
-      <center
+      <FiledAppBar
+        onLeft={console.log}
+        onRight={null}
+        title="مرحله ۲ از ۲۲"
+        variant="form"
+      />
+      <div
         style={{
-          margin: '0 20px 16px',
-          justifyContent: 'space-between',
-          display: 'flex',
+          overflow: 'auto',
+          height: 'calc(100% - 40px)', // subtract header
+          padding: '20px 0',
+          boxSizing: 'border-box',
         }}
       >
-        <Button text="ذخیره" color="blue" onClick={console.log} />
-        <Button text="پیش نمایش" color="gray" onClick={console.log} />
-        <Button
-          text="افزودن مورد"
-          color="yellow"
-          variant="plus"
-          onClick={() => setOpen(true)}
+        <FieldBox mode="DEFAULTS" type="صفحه شروع" onEdit={console.log} />
+        <FieldBox
+          mode="DIVIDER"
+          type="جداکننده (۱ از ۱)"
+          onDelete={console.log}
+          onDuplicate={console.log}
         />
-      </center>
+        <FieldBox
+          mode="COVER"
+          type="ورودی تک خطی"
+          title="محل تولد"
+          onEdit={console.log}
+          onDelete={console.log}
+          onDuplicate={console.log}
+        />
 
-      <center
-        style={{
-          margin: '0 20px 16px',
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Button text="ارسال جدید" color="blue" onClick={console.log} />
-        <Button text="خروجی اکسل" color="green" onClick={console.log} />
-        <Button text="غیرفعال سازی" color="gray" onClick={console.log} />
-      </center>
+        <SearchField onChange={console.log} />
 
-      <User
-        name="مصطفی محسنی کبیر"
-        date="پنج شنبه ۱۲ آبان - ۱۶:۵۴"
-        onDelete={console.log}
-        avatarSrc="https://i.pinimg.com/564x/37/eb/f4/37ebf4bf5206f67cb5f221dc7dc92609.jpg"
-      />
+        <center
+          style={{
+            margin: '0 20px 16px',
+            justifyContent: 'space-between',
+            display: 'flex',
+          }}
+        >
+          <Button text="ذخیره" color="blue" onClick={console.log} />
+          <Button text="پیش نمایش" color="gray" onClick={console.log} />
+          <Button
+            text="افزودن مورد"
+            color="yellow"
+            variant="plus"
+            onClick={() => setOpen(true)}
+          />
+        </center>
 
-      <User
-        name="Ali Asgari"
-        date="پنج شنبه ۱۲ آبان - ۱۶:۵۴"
-        onDelete={console.log}
-        deActive
-      />
+        <center
+          style={{
+            margin: '0 20px 16px',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          <Button text="ارسال جدید" color="blue" onClick={console.log} />
+          <Button text="خروجی اکسل" color="green" onClick={console.log} />
+          <Button text="غیرفعال سازی" color="gray" onClick={console.log} />
+        </center>
 
-      <Drawer
-        open={open}
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        onItemClick={console.log}
-      />
-    </div>
+        <User
+          name="مصطفی محسنی کبیر"
+          date="پنج شنبه ۱۲ آبان - ۱۶:۵۴"
+          onDelete={console.log}
+          avatarSrc="https://i.pinimg.com/564x/37/eb/f4/37ebf4bf5206f67cb5f221dc7dc92609.jpg"
+        />
+
+        <User
+          name="Ali Asgari"
+          date="پنج شنبه ۱۲ آبان - ۱۶:۵۴"
+          onDelete={console.log}
+          deActive
+        />
+
+        <Drawer
+          open={open}
+          onClose={() => setOpen(false)}
+          onOpen={() => setOpen(true)}
+          onItemClick={console.log}
+        />
+
+        <SingleLineInput
+          label="جانگهدار (Place Holder)"
+          placeholder="عنوان مورد نظر را وارد کنید"
+          onChange={console.log}
+        />
+
+        <Switch
+          leftText="اجباری نیست"
+          rightText="اجباری است"
+          onLeftClick={console.log}
+          onRightClick={console.log}
+          label="ضرورت"
+        />
+
+        <Button
+          text="تنظیمات پیشرفته"
+          color="blue"
+          onClick={console.log}
+          variant="standAlone"
+        />
+
+        <MultiLineInput
+          placeholder="متن پایان را وارد کنید"
+          onChange={console.log}
+        />
+
+        <Switch
+          leftText="عدم نمایش"
+          rightText="نمایش"
+          onLeftClick={console.log}
+          onRightClick={console.log}
+          label="صفحه پایان"
+        />
+
+        <TextOptions
+          onBold={console.log}
+          onItalic={console.log}
+          onUnderLine={console.log}
+          onLink={console.log}
+        />
+
+        <SingleLineInput
+          label="محدودیت حجم(کیلوبایت)"
+          placeholder="مقدار مورد نظر را وارد کنید"
+          onChange={console.log}
+          type="number"
+        />
+      </div>
+    </>
   )
 }
 export default Create

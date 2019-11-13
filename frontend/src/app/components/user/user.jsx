@@ -60,27 +60,17 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#ccc',
     boxShadow: 'none',
     '&:hover': {
-      backgroundColor: darken('#ccc', 0.1),
-    },
-  },
-  deActive: {
-    backgroundColor: '#E6494F',
-    '&:hover': {
-      backgroundColor: darken('#E6494F', 0.1),
+      backgroundColor: '#E6494F',
     },
   },
 }))
 
-const User = ({ name, onDelete, avatarSrc, date, deActive }) => {
+const User = ({ name, onDelete, avatarSrc, date }) => {
   const classes = useStyles()
   return (
     <div className={classes.user}>
       <div className={classes.body}>
-        <Fab
-          size="small"
-          className={cns(classes.deleteButton, ab(classes.deActive)(deActive))}
-          onClick={onDelete}
-        >
+        <Fab size="small" className={classes.deleteButton} onClick={onDelete}>
           <img src="assets/svg/trash.svg" alt="trash" />
         </Fab>
         <div className={classes.texts}>
@@ -117,11 +107,9 @@ User.propTypes = {
   onDelete: PropTypes.func.isRequired,
   avatarSrc: PropTypes.string,
   date: PropTypes.string.isRequired,
-  deActive: PropTypes.bool,
 }
 User.defaultProps = {
   avatarSrc: null,
-  deActive: false,
 }
 
 export default User

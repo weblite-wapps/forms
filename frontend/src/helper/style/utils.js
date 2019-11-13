@@ -14,3 +14,10 @@ export const cns = (...args) => {
   }
   return classNames.trimEnd()
 }
+
+/** SyntheticEvent Handler
+ * return a Synthesized version of input function
+ */
+export const SyntheticEvent = func => ({ target: { value } }) => {
+  func(value)
+}

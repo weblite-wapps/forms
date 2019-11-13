@@ -41,12 +41,11 @@ const Drawer = ({ open, onClose, onOpen, onItemClick }) => {
       disablePortal
       elevation={2}
       anchor="right"
-      // dir="rtl"
       disableBackdropTransition
       open={open}
       onClose={onClose}
       onOpen={onOpen}
-      transitionDuration={500}
+      transitionDuration={300}
       ModalProps={{
         keepMounted: true,
         BackdropProps: {
