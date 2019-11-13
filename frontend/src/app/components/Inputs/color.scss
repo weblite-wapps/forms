@@ -1,0 +1,12 @@
+.dynamic--color {
+    background:
+   linear-gradient(to right, #e6494f 0%,#ff9c46 25%, #6bce6b 45%, #00c0ff 65%, #4997e6 75%, #a949e6 90%,#e6494f  100%);
+  background:
+    conic-gradient(#e6494f, #ff9c46, #6bce6b, #00c0ff, #4997e6, #a949e6, #e6494f);
+    &::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+    &::-webkit-color-swatch {
+        border: none;
+    }
+}

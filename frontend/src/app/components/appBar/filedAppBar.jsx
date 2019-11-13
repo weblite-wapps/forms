@@ -150,11 +150,12 @@ const FiledAppBar = ({ variant, title, onLeft, onRight }) => {
 FiledAppBar.propTypes = {
   variant: PropTypes.oneOf(['field', 'form', 'preview']),
   title: PropTypes.string.isRequired,
-  onLeft: PropTypes.func.isRequired,
-  onRight: PropTypes.func.isRequired,
+  onLeft: PropTypes.func,
+  onRight: PropTypes.func,
 }
 FiledAppBar.defaultProps = {
   variant: 'field',
+  onLeft: null,
+  onRight: null,
 }
-
 export default FiledAppBar

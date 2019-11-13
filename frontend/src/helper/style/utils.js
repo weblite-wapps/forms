@@ -12,7 +12,7 @@ export const cns = (...args) => {
     classNames += !args[index] ? '' : `${args[index]} `
     index += 1
   }
-  return classNames.trimEnd()
+  return classNames
 }
 
 /** SyntheticEvent Handler
