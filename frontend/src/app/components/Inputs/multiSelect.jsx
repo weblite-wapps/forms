@@ -91,6 +91,16 @@ const MultiSelect = ({ label, options, onClick }) => {
   )
 }
 
-MultiSelect.propTypes = {}
+MultiSelect.propTypes = {
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.exact({
+      text: PropTypes.string,
+      selected: PropTypes.bool,
+      id: PropTypes.string,
+    }),
+  ),
+  onClick: PropTypes.func.isRequired,
+}
 
 export default MultiSelect

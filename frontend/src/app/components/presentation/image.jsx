@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import { Typography } from '@material-ui/core'
+// components
 import { makeStyles } from '@material-ui/core/styles'
-import { classes } from 'istanbul-lib-coverage'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -14,6 +12,8 @@ const useStyles = makeStyles(() => ({
     maxWidth: '100%',
     height: 'auto',
     objectFit: 'contain',
+    display: 'block',
+    margin: 'auto',
   },
 }))
 const Image = ({ src, alt }) => {

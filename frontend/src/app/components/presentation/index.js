@@ -1,2 +1,7 @@
-export { default as Text } from './text'
+export { default as TextWithLabel } from './textWithLabel'
 export { default as Image } from './image'
+export { default as Color } from './color'
+export { default as Text } from './text'
+export { default as Header } from './header'
+export { default as File } from './file'
+export { default as PresentationLabel } from './presentationLabel'

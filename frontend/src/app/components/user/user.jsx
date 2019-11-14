@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 import Fab from '@material-ui/core/Fab'
 import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar'
-import { makeStyles, darken } from '@material-ui/core/styles'
-//helper
-import { cns, ab } from '../../../helper/style/utils'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   user: {

@@ -6,32 +6,34 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(() => ({
   root: {
-    margin: '5px 20px 16px',
+    margin: '0 20px',
+    height: 30,
+    borderRadius: 11,
+    backgroundColor: '#f0f0f0',
   },
   text: {
-    whiteSpace: 'pre-wrap',
-    fontWeight: 'Bold',
-    fontSize: 12,
+    direction: 'rtl',
     marginRight: 10,
-    marginLeft: 10,
-    lineHeight: '21px',
+    fontSize: 11,
+    color: '#818181',
+    fontWeight: 'Bold',
+    lineHeight: '30px',
     letterSpacing: -0.08,
   },
 }))
-const Text = ({ label, text }) => {
+const PresentationLabel = ({ text }) => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Typography className={classes.text} dir="auto" align="right">
+      <Typography className={classes.text} align="right">
         {text}
       </Typography>
     </div>
   )
 }
 
-Text.propTypes = {
-  label: PropTypes.string.isRequired,
+PresentationLabel.propTypes = {
   text: PropTypes.string.isRequired,
 }
 
-export default Text
+export default PresentationLabel

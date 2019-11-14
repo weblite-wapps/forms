@@ -8,6 +8,7 @@ export default createMuiTheme({
         minHeight: 50,
       },
     },
+
     MuiTypography: {
       h1: {
         fontFamily: 'inherit',

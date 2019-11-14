@@ -67,7 +67,6 @@ const ColorPicker = ({ colors, onClick, onChange, label, hasPicker }) => {
         {hasPicker && (
           // this is a Masterpiece [Enjoy :)]
           <input
-            value="#00c0ff"
             type="color"
             onChange={onChange}
             className={cns(

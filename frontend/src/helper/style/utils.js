@@ -21,3 +21,8 @@ export const cns = (...args) => {
 export const SyntheticEvent = func => ({ target: { value } }) => {
   func(value)
 }
+
+/** getDirection */
+// is rlt if arabic pattern contains all character
+const ARABIC_PATTERN = /[\u0600-\u06FF]/
+export const getDirection = text => (ARABIC_PATTERN.test(text) ? 'rtl' : 'ltr')

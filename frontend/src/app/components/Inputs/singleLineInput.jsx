@@ -49,7 +49,7 @@ const SingleLineInput = ({ label, placeholder, onChange, type }) => {
           onChange={onChange}
           className={classes.inputContainer}
           classes={{ input: classes.input }}
-          inputProps={{ dir: 'auto' }}
+          inputProps={{ dir: type === 'number' ? 'rtl' : 'auto' }}
           fullWidth
           placeholder={placeholder}
         />
