@@ -24,6 +24,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   dynamicColor: {
+    cursor: 'pointer',
     overflow: 'hidden',
     boxSizing: 'border-box',
     padding: '17.5px',

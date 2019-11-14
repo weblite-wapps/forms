@@ -16,6 +16,8 @@ import {
   MultiSelect,
 } from '../Inputs'
 
+import { Text, Image } from '../presentation'
+
 const Create = () => {
   const [open, setOpen] = React.useState(false)
 
@@ -56,7 +58,7 @@ const Create = () => {
           { color: '#4997E6', selected: true, id: '#4997E6' },
           { color: '#FF9C46', selected: false, id: '#FF9C46' },
           { color: '#6BCE6B', selected: false, id: '#6BCE6B' },
-          { color: '#818181', selected: true, id: '#818181' },
+          { color: '#818181', selected: false, id: '#818181' },
           { color: '#E6494F', selected: false, id: '#E6494F' },
         ]}
         onClick={console.log}
@@ -64,6 +66,20 @@ const Create = () => {
         hasPicker
       />
 
+      <Text
+        label="این یک عنوان است"
+        text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد."
+      />
+
+      <Image
+        src="https://i.pinimg.com/564x/bc/dd/2c/bcdd2cbb2ac6ab2d0caacbb27f6641a4.jpg"
+        alt="please use these accessibility tools"
+      />
+
+      <Image
+        src="https://i.pinimg.com/564x/28/46/32/2846324e422142c381eae45ec3cdbfdf.jpg"
+        alt="please use these accessibility tools"
+      />
       <MultiSelect
         label="چند انتخابی"
         onClick={console.log}
