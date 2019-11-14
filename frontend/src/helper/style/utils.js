@@ -12,5 +12,12 @@ export const cns = (...args) => {
     classNames += !args[index] ? '' : `${args[index]} `
     index += 1
   }
-  return classNames.trimEnd()
+  return classNames
+}
+
+/** SyntheticEvent Handler
+ * return a Synthesized version of input function
+ */
+export const SyntheticEvent = func => ({ target: { value } }) => {
+  func(value)
 }

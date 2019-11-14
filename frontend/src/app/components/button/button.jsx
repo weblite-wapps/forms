@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, darken } from '@material-ui/core/styles'
 //helper
-import { cns } from '../../../helper/style/utils'
+import { cns, ab } from '../../../helper/style/utils'
 
 const useStyles = makeStyles(() => ({
   button: {
@@ -20,6 +20,9 @@ const useStyles = makeStyles(() => ({
     '&:last-of-type': {
       marginRight: 0,
     },
+  },
+  standAlone: {
+    margin: '0 20px 15px',
   },
   iconButton: {
     padding: 0,
@@ -100,7 +103,7 @@ const FormButton = ({ color, text, variant, onClick }) => {
       </Button>
     )
 
-  return (
+  const ButtonChild = (
     <Button
       onClick={onClick}
       className={cns(classes.button, classes[color], classes.bgc)}
@@ -108,13 +111,17 @@ const FormButton = ({ color, text, variant, onClick }) => {
       {text}
     </Button>
   )
+
+  if (variant === 'standAlone')
+    return <div className={classes.standAlone}>{ButtonChild}</div>
+  return ButtonChild
 }
 
 FormButton.propTypes = {
   color: PropTypes.oneOf(['blue', 'gray', 'green', 'yellow']),
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  variant: PropTypes.oneOf(['plus', 'normal']),
+  variant: PropTypes.oneOf(['plus', 'normal', 'standAlone']),
 }
 FormButton.defaultProps = {
   color: 'blue',

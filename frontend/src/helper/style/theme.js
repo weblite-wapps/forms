@@ -29,5 +29,10 @@ export default createMuiTheme({
         fontWeight: 'Bold',
       },
     },
+    MuiInput: {
+      root: {
+        fontFamily: 'inherit',
+      },
+    },
   },
 })

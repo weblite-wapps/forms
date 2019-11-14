@@ -8,8 +8,13 @@
 .body {
   height: calc(100% - 50px);
   width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
-  // transform: translateZ(0);
+}
+
+img {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
