@@ -5,7 +5,7 @@ const initialState = {
   editPage: {
     selectedField: {},
   },
-  menuIsOpen: false,
+  // menuIsOpen: false,
 }
 
 const reducers = {
@@ -14,10 +14,10 @@ const reducers = {
     mode,
   }),
 
-  SET_MENU_IS_OPEN: (state, menuIsOpen) => ({
-    ...state,
-    menuIsOpen,
-  }),
+  // SET_MENU_IS_OPEN: (state, menuIsOpen) => ({
+  //   ...state,
+  //   menuIsOpen,
+  // }),
 
   SET_SELECTED_FIELD: (state, selectedField) => ({
     ...state,

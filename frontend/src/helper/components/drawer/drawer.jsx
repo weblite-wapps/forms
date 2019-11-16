@@ -30,7 +30,11 @@ const Drawer = ({ open, onClose, onOpen, onItemClick }) => {
           'header',
           'divider',
         ].map(type => (
-          <DrawerItem key={type} type={type} onClick={onItemClick} />
+          <DrawerItem
+            key={type}
+            type={type}
+            onClick={type => onItemClick(type)}
+          />
         ))}
       </List>
     ),

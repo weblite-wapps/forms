@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const SingleLineInput = ({ label, placeholder, onChange, type }) => {
+const SingleLineInput = ({ label, placeholder, onChange, type, value }) => {
   const classes = useStyles()
   return (
     <div className={classes.singleLineInput}>
@@ -52,6 +52,7 @@ const SingleLineInput = ({ label, placeholder, onChange, type }) => {
           inputProps={{ dir: 'auto' }}
           fullWidth
           placeholder={placeholder}
+          value={value}
         />
       </label>
     </div>

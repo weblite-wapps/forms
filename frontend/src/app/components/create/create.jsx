@@ -9,6 +9,7 @@ import Drawer from '../../../helper/components/drawer/drawer'
 import Switch from '../../../helper/components/switch/switchButtons'
 import TextOptions from '../../../helper/components/textOptions/textOptions'
 import FilledAppBar from '../appBar/filledAppBar'
+import EditPage from './components/editPage/editPage.container'
 import {
   SingleLineInput,
   MultiLineInput,
@@ -18,7 +19,15 @@ import {
 
 import { Text, Image } from '../../../helper/components/presentation'
 
-const Create = () => {
+const Create = ({
+  preview,
+  addField,
+  editField,
+  removeField,
+  duplicateField,
+  form,
+  mode,
+}) => {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -34,7 +43,7 @@ const Create = () => {
         open={open}
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
-        onItemClick={console.log}
+        onItemClick={addField}
       />
       <center
         style={{
@@ -44,7 +53,7 @@ const Create = () => {
         }}
       >
         <Button text="ذخیره" color="blue" onClick={console.log} />
-        <Button text="پیش نمایش" color="gray" onClick={console.log} />
+        <Button text="پیش نمایش" color="gray" onClick={preview} />
         <Button
           text="افزودن مورد"
           color="yellow"
@@ -53,7 +62,18 @@ const Create = () => {
         />
       </center>
       <FieldBox mode="DEFAULTS" type="صفحه شروع" onEdit={console.log} />
+      {form.fields.map(field => (
+        <FieldBox
+          mode="COVER"
+          title={field.data.title}
+          onEdit={() => editField(field)}
+          onDelete={() => removeField(field.id)}
+          onDuplicate={() => duplicateField(field)}
+          key={field.id}
+        />
+      ))}
       <FieldBox mode="DEFAULTS" type="صفحه پایان" onEdit={console.log} />
+      {mode === 'edit' && <EditPage />}
     </div>
   )
 }

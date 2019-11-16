@@ -30,3 +30,7 @@ export const dispatchRemoveDraftField = (...args) =>
 export const UPDATE_DRAFT_FIELD = 'UPDATE_DRAFT_FIELD'
 export const dispatchUpdateDraftField = (...args) =>
   dispatch(createAction(UPDATE_DRAFT_FIELD)(...args))
+
+export const DUPLICATE_DRAFT_FIELD = 'DUPLICATE_DRAFT_FIELD'
+export const dispatchDuplicateDraftField = (...args) =>
+  dispatch(createAction(DUPLICATE_DRAFT_FIELD)(...args))
