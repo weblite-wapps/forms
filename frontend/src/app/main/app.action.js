@@ -19,10 +19,14 @@ export const SET_DRAFT_FORM = 'SET_DRAFT_FORM'
 export const dispatchSetDraftForm = (...args) =>
   dispatch(createAction(SET_DRAFT_FORM)(...args))
 
-export const ADD_TO_DRAFT_FORM = 'ADD_TO_DRAFT_FORM'
-export const dispatchAddToDraftForm = (...args) =>
-  dispatch(createAction(ADD_TO_DRAFT_FORM)(...args))
+export const ADD_DRAFT_FIELD = 'ADD_DRAFT_FIELD'
+export const dispatchAddDraftField = (...args) =>
+  dispatch(createAction(ADD_DRAFT_FIELD)(...args))
 
-export const REMOVE_FROM_DRAFT_FORM = 'REMOVE_FROM_DRAFT_FORM'
-export const dispatchRemoveFromDraftForm = (...args) =>
-  dispatch(createAction(REMOVE_FROM_DRAFT_FORM)(...args))
+export const REMOVE_DRAFT_FIELD = 'REMOVE_DRAFT_FIELD'
+export const dispatchRemoveDraftField = (...args) =>
+  dispatch(createAction(REMOVE_DRAFT_FIELD)(...args))
+
+export const UPDATE_DRAFT_FIELD = 'UPDATE_DRAFT_FIELD'
+export const dispatchUpdateDraftField = (...args) =>
+  dispatch(createAction(UPDATE_DRAFT_FIELD)(...args))

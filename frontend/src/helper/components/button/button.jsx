@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, darken } from '@material-ui/core/styles'
 //helper
-import { cns, ab } from '../../../helper/style/utils'
+import { cns, ab } from '../../style/utils'
 
 const useStyles = makeStyles(() => ({
   button: {

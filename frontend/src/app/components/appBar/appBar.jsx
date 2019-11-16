@@ -8,7 +8,7 @@ import './appBar.scss'
 const AppBar = () => (
   <MuiAppBar position="static">
     <Toolbar className="c--appBar_toolbar">
-      <img alt="appbar" src="logo.svg" />
+      <img alt="appbar" src="assets/svg/logo.svg" />
 
       <div className="c--appBar_typo">
         <span className="c--appBar_form iranyekan">FORM</span>

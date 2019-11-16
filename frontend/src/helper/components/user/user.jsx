@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar'
 import { makeStyles, darken } from '@material-ui/core/styles'
 //helper
-import { cns, ab } from '../../../helper/style/utils'
+import { cns, ab } from '../../style/utils'
 
 const useStyles = makeStyles(theme => ({
   user: {

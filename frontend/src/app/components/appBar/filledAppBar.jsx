@@ -112,7 +112,7 @@ const getIcons = (variant, classes) => {
  *
  * onLeft|onRight => Pass null for disabled
  */
-const FiledAppBar = ({ variant, title, onLeft, onRight }) => {
+const FilledAppBar = ({ variant, title, onLeft, onRight }) => {
   const classes = useStyles()
   const [leftIcon, rightIcon] = getIcons(variant, classes)
 
@@ -147,15 +147,15 @@ const FiledAppBar = ({ variant, title, onLeft, onRight }) => {
   )
 }
 
-FiledAppBar.propTypes = {
+FilledAppBar.propTypes = {
   variant: PropTypes.oneOf(['field', 'form', 'preview']),
   title: PropTypes.string.isRequired,
   onLeft: PropTypes.func,
   onRight: PropTypes.func,
 }
-FiledAppBar.defaultProps = {
+FilledAppBar.defaultProps = {
   variant: 'field',
   onLeft: null,
   onRight: null,
 }
-export default FiledAppBar
+export default FilledAppBar

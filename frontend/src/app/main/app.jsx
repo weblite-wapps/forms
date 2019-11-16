@@ -19,7 +19,7 @@ const App = ({ path }) => (
   <>
     <AppBar />
     <div className="body">
-      <Tabs />
+      {/* <Tabs /> */}
       {componentMapper[path]}
     </div>
   </>

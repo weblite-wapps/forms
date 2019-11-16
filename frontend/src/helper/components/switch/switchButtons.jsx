@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, darken } from '@material-ui/core/styles'
-import { ab, cns } from '../../../helper/style/utils'
+import { ab, cns } from '../../style/utils'
 // helper
 
 const useStyles = makeStyles(() => ({

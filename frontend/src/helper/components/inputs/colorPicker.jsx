@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { cns } from '../../../helper/style/utils'
+import { cns } from '../../style/utils'
 import './color.scss'
 
 const useStyles = makeStyles(() => ({

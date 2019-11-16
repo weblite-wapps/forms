@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 // components
 import Create from './create'
 import {
-  dispatchAddToDraftForm,
-  dispatchRemoveFromDraftForm,
+  dispatchAddDraftField,
+  dispatchRemoveDraftField,
 } from '../../main/app.action'
 // actions
 
@@ -15,8 +15,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = () => ({
-  addField: dispatchAddToDraftForm,
-  removeField: dispatchRemoveFromDraftForm,
+  addField: type => dispatchAddDraftField,
+  removeField: dispatchRemoveDraftField,
 })
 
 export default connect(
