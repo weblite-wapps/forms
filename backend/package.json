@@ -1,0 +1,39 @@
+{
+  "name": "forms-server",
+  "version": "0.1.0",
+  "description": "Server for Forms wapp",
+  "main": "./src/index.js",
+  "scripts": {
+    "prebuild": "rm -rf build",
+    "build": "cross-env NODE_ENV=production babel src --out-dir build --copy-files",
+    "prestart": "cross-env NODE_ENV=production yarn run build",
+    "start": "cross-env NODE_ENV=production node build/index.js",
+    "dev": "babel-watch src/index.js --watch src"
+  },
+  "repository": "https://github.com/weblite-wapps/forms",
+  "author": "Masoud Salehi <msk.masoud.74@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "prettier": "@web-lite/prettier-config",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@koa/cors": "^3.0.0",
+    "@koa/router": "^8.0.2",
+    "bluebird": "^3.7.1",
+    "core-js": "3",
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "mongoose": "^5.7.10",
+    "ramda": "^0.26.1",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@web-lite/prettier-config": "^1.0.0",
+    "babel-watch": "^7.0.0",
+    "cross-env": "^6.0.3",
+    "prettier": "^1.19.1"
+  }
+}
